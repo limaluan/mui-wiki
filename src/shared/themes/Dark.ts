@@ -1,23 +1,26 @@
-import { createTheme } from "@mui/material";
-import { blue, blueGrey } from "@mui/material/colors";
+import { createTheme } from '@mui/material';
+import { blue, blueGrey } from '@mui/material/colors';
 
 export const DarkTheme = createTheme({
+  typography: {
+    fontFamily: 'Poppins',
+  },
   palette: {
     primary: {
       main: blue[700],
       dark: blue[800],
       light: blue[500],
-      contrastText: "#fff",
+      contrastText: '#fff',
     },
     secondary: {
       main: blueGrey[500],
       dark: blueGrey[400],
       light: blueGrey[300],
-      contrastText: "#fff",
+      contrastText: '#fff',
     },
     background: {
-      default: "#202124", 
-      paper: "#303134",
-    }
+      default: '#202124',
+      paper: '#303134',
+    },
   },
 });

@@ -13,7 +13,7 @@ interface IThemeContextData {
   toggleTheme: () => void;
 }
 
-interface IAppThemeProvider {
+interface IAppThemeProviderProps {
   children: React.ReactNode;
 }
 
@@ -23,7 +23,7 @@ export const useAppThemeContext = () => {
   return useContext(ThemeContext);
 };
 
-export const AppThemeProvider = ({ children }: IAppThemeProvider) => {
+export const AppThemeProvider = ({ children }: IAppThemeProviderProps) => {
   const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
 
   const toggleTheme = useCallback(() => {

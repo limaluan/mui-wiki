@@ -1,24 +1,11 @@
-import { Button } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
-import { useDrawerContext } from '../shared/contexts';
+import { Home, Instalacao } from '../pages';
 
 export const AppRoutes = () => {
-  const { toggleDrawerOpen } = useDrawerContext();
-
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={toggleDrawerOpen}
-          >
-            Toggle Drawer
-          </Button>
-        }
-      />
+      <Route path="/" element={<Home />} />
+      <Route path="/instalando" element={<Instalacao />} />
     </Routes>
   );
 };

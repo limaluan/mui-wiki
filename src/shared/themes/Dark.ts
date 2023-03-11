@@ -4,8 +4,12 @@ import { blue, blueGrey } from '@mui/material/colors';
 export const DarkTheme = createTheme({
   typography: {
     fontFamily: 'Poppins',
+    allVariants: {
+      color: '#fff',
+    },
   },
   palette: {
+    mode: 'dark',
     primary: {
       main: blue[700],
       dark: blue[800],

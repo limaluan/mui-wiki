@@ -29,7 +29,7 @@ export const SideNav = ({ children }: ISideNavProps) => {
   const [search, setSearch] = useState('');
 
   const sidenavItems: ISideNavItem[] = [
-    { title: 'PERSONALIZAÇÃO', subItems: ['Temas'] },
+    { title: 'INICIANDO', subItems: ['Instalando'] },
     { title: 'ELEMENTOS', subItems: ['Box', 'Mates'] },
   ];
 
@@ -87,8 +87,8 @@ export const SideNav = ({ children }: ISideNavProps) => {
                     subItem.toLowerCase().includes(search.toLowerCase())
                   );
             })
-            .map((item) => (
-              <>
+            .map((item, index) => (
+              <Box key={index} display="flex" flexDirection="column" gap={theme.spacing(1)}>
                 <Typography
                   style={{ cursor: 'default' }}
                   fontWeight="700"
@@ -97,19 +97,20 @@ export const SideNav = ({ children }: ISideNavProps) => {
                 >
                   {item.title}
                 </Typography>
-                {item.subItems.map((item) => (
+                {item.subItems.map((item, index) => (
                   <Link
-                    href="#"
+                    href={item.toLowerCase()}
                     underline="hover"
                     width="fit-content"
                     color={theme.palette.primary.main}
+                    key={index}
                   >
                     <Typography marginLeft={theme.spacing(2.5)}>
                       {item}
                     </Typography>
                   </Link>
                 ))}
-              </>
+              </Box>
             ))}
         </Box>
       </Drawer>

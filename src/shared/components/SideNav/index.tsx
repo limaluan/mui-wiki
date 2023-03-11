@@ -4,10 +4,12 @@ import {
   Input,
   Link,
   Typography,
+  useMediaQuery,
   useTheme,
 } from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react';
+import { useDrawerContext } from '../../contexts';
 
 interface ISideNavProps {
   children: React.ReactNode;
@@ -19,7 +21,10 @@ interface ISideNavItem {
 }
 
 export const SideNav = ({ children }: ISideNavProps) => {
+  const { isDrawerOpen, toggleDrawerOpen } = useDrawerContext();
+
   const theme = useTheme();
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [search, setSearch] = useState('');
 
@@ -30,7 +35,12 @@ export const SideNav = ({ children }: ISideNavProps) => {
 
   return (
     <>
-      <Drawer variant="permanent">
+      <Drawer
+        open={isDrawerOpen}
+        variant={smDown ? 'temporary' : 'permanent'}
+        onClose={toggleDrawerOpen}
+      >
+        {/* Drawer HEADER */}
         <Box width={theme.spacing(28)} display="flex" flexDirection="column">
           <Box
             width="100%"
@@ -39,17 +49,22 @@ export const SideNav = ({ children }: ISideNavProps) => {
             display="flex"
             alignItems="center"
             justifyContent="center"
+            flexDirection="column"
           >
             <img
               height="100%"
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
             />
+            <Typography color={theme.palette.secondary.light}>
+              Wiki V1.0.0
+            </Typography>
           </Box>
 
           <Divider />
         </Box>
 
         {/* Aqui ficará as páginas para navegação e barra de pesquisa */}
+        {/* Drawer Body */}
         <Box
           flex={1}
           display="flex"
@@ -99,7 +114,8 @@ export const SideNav = ({ children }: ISideNavProps) => {
         </Box>
       </Drawer>
 
-      <Box height="100vh" marginLeft={theme.spacing(28)}>
+      {/* Drawer Content */}
+      <Box height="100vh" marginLeft={smDown ? 0 : theme.spacing(28)}>
         {children}
       </Box>
     </>

@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react';
-import { useDrawerContext } from '../../contexts';
+import { useDrawerContext } from '../contexts';
 import { Link } from 'react-router-dom';
 
 interface ISideNavProps {
@@ -29,8 +29,8 @@ export const SideNav = ({ children }: ISideNavProps) => {
   const [search, setSearch] = useState('');
 
   const sidenavItems: ISideNavItem[] = [
-    { title: 'INICIANDO', subItems: ['Instalando'] },
-    { title: 'ELEMENTOS', subItems: ['Box', 'Mates'] },
+    { title: 'INTRODUÇÃO', subItems: ['Instalando'] },
+    { title: 'LAYOUT', subItems: ['Geral', 'Temas'] },
   ];
 
   return (

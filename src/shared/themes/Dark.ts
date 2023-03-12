@@ -7,6 +7,10 @@ export const DarkTheme = createTheme({
     allVariants: {
       color: '#fff',
     },
+    h5: {
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+    },
   },
   palette: {
     mode: 'dark',

@@ -39,7 +39,7 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <Link to="/" style={{textDecoration: "none"}}>
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <Typography
             variant="h5"
             color={theme.palette.primary.contrastText}
@@ -97,7 +97,14 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
         </Typography>
       </Box>
 
-      <Box flex={1} overflow="auto">
+      <Box
+        flex={1}
+        overflow="auto"
+        display="flex"
+        flexDirection="column"
+        gap={2}
+        padding={4}
+      >
         {children}
       </Box>
     </Box>

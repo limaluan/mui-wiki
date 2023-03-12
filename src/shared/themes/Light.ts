@@ -4,6 +4,10 @@ import { blue, blueGrey } from '@mui/material/colors';
 export const LightTheme = createTheme({
   typography: {
     fontFamily: 'Poppins',
+    h5: {
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+    },
   },
   palette: {
     primary: {

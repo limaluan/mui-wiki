@@ -1,2 +1,3 @@
 export * from './Home';
-export * from './Instalacao';
+export * from './Instalando';
+export * from './Geral';

@@ -88,7 +88,12 @@ export const SideNav = ({ children }: ISideNavProps) => {
                   );
             })
             .map((item, index) => (
-              <Box key={index} display="flex" flexDirection="column" gap={theme.spacing(1)}>
+              <Box
+                key={index}
+                display="flex"
+                flexDirection="column"
+                gap={theme.spacing(1)}
+              >
                 <Typography
                   style={{ cursor: 'default' }}
                   fontWeight="700"
@@ -97,19 +102,27 @@ export const SideNav = ({ children }: ISideNavProps) => {
                 >
                   {item.title}
                 </Typography>
-                {item.subItems.map((item, index) => (
-                  <Link
-                    href={item.toLowerCase()}
-                    underline="hover"
-                    width="fit-content"
-                    color={theme.palette.primary.main}
-                    key={index}
-                  >
-                    <Typography marginLeft={theme.spacing(2.5)}>
-                      {item}
-                    </Typography>
-                  </Link>
-                ))}
+                {item.subItems
+                  .filter((subItem) => {
+                    return search.toLowerCase() === ''
+                      ? subItem
+                      : subItem
+                          .toLocaleLowerCase()
+                          .includes(search.toLowerCase());
+                  })
+                  .map((item, index) => (
+                    <Link
+                      href={item.toLowerCase()}
+                      underline="hover"
+                      width="fit-content"
+                      color={theme.palette.primary.main}
+                      key={index}
+                    >
+                      <Typography marginLeft={theme.spacing(2.5)}>
+                        {item}
+                      </Typography>
+                    </Link>
+                  ))}
               </Box>
             ))}
         </Box>

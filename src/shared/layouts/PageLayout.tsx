@@ -7,6 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { Link } from 'react-router-dom';
 
 interface IBasePageProps {
   children: React.ReactNode;
@@ -38,16 +39,15 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <Typography
-          variant="h5"
-          component="a"
-          color={theme.palette.primary.contrastText}
-          href="/"
-          style={{ textDecoration: 'none' }}
-        >
-          Ínicio
-        </Typography>
-
+        <Link to="/" style={{textDecoration: "none"}}>
+          <Typography
+            variant="h5"
+            color={theme.palette.primary.contrastText}
+            style={{ textDecoration: 'none' }}
+          >
+            Ínicio
+          </Typography>
+        </Link>
         <Box display="flex" alignItems="center">
           {themeName === 'light' ? (
             <IconButton onClick={toggleTheme}>
@@ -90,6 +90,8 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
           whiteSpace="nowrap"
           overflow="hidden"
           textOverflow="ellipsis"
+          fontWeight="700"
+          fontFamily="Roboto"
         >
           {title}
         </Typography>

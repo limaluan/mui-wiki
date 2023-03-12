@@ -2,7 +2,6 @@ import {
   Divider,
   Drawer,
   Input,
-  Link,
   Typography,
   useMediaQuery,
   useTheme,
@@ -10,6 +9,7 @@ import {
 import { Box } from '@mui/system';
 import { useState } from 'react';
 import { useDrawerContext } from '../../contexts';
+import { Link } from 'react-router-dom';
 
 interface ISideNavProps {
   children: React.ReactNode;
@@ -112,13 +112,18 @@ export const SideNav = ({ children }: ISideNavProps) => {
                   })
                   .map((item, index) => (
                     <Link
-                      href={item.toLowerCase()}
-                      underline="hover"
-                      width="fit-content"
-                      color={theme.palette.primary.main}
+                      to={item.toLowerCase()}
                       key={index}
+                      style={{
+                        textDecoration: 'none',
+                        color: theme.palette.primary.main,
+                        width: 'fit-content',
+                      }}
                     >
-                      <Typography marginLeft={theme.spacing(2.5)}>
+                      <Typography
+                        width="fit-content"
+                        marginLeft={theme.spacing(2.5)}
+                      >
                         {item}
                       </Typography>
                     </Link>

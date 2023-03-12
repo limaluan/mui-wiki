@@ -29,8 +29,9 @@ export const SideNav = ({ children }: ISideNavProps) => {
   const [search, setSearch] = useState('');
 
   const sidenavItems: ISideNavItem[] = [
-    { title: 'INTRODUÇÃO', subItems: ['Instalando'] },
-    { title: 'LAYOUT', subItems: ['Geral', 'Temas'] },
+    { title: 'INTRODUÇÃO', subItems: ['Instalando', 'Usando'] },
+    { title: 'LAYOUT', subItems: ['Geral', 'Temas', 'MediaQueries'] },
+    { title: 'COMPONENTES', subItems: ['Drawer', 'Button', 'Box', 'Container', 'Grid'] },
   ];
 
   return (

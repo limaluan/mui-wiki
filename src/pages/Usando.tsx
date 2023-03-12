@@ -2,9 +2,11 @@ import { Button, Typography } from '@mui/material';
 import { CodeBox } from '../shared/components';
 import { PageLayout } from '../shared/layouts';
 
-export const Geral = () => {
+export const Usando = () => {
   return (
-    <PageLayout title="Visão Geral">
+    <PageLayout title="Usando o MUI">
+      <Typography variant="h5">Componentes</Typography>
+
       <Typography>
         Os componentes do Material-UI são construídos com base em uma abordagem
         modular e podem ser facilmente importados e usados em aplicativos React
@@ -13,7 +15,7 @@ export const Geral = () => {
         e criem novos componentes a partir dos existentes.
       </Typography>
 
-      <Typography variant="h5">Criando o primeiro componente</Typography>
+      <Typography variant="h5">Criando seu primeiro componente</Typography>
 
       <Typography>
         Como exemplo de primeiro componente, vamos renderizar um botão na tela:

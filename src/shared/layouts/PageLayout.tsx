@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 interface IBasePageProps {
   children: React.ReactNode;
@@ -25,6 +26,10 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
   const { themeName, toggleTheme } = useAppThemeContext();
   const { toggleDrawerOpen } = useDrawerContext();
 
+  useEffect(() => {
+    document.title = title + " | MUI Wiki"
+  }, []);
+  
   return (
     <Box height="100%" display="flex" flexDirection="column">
       {/* HEADER */}

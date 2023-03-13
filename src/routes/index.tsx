@@ -10,6 +10,7 @@ import {
   BoxPage,
   ButtonPage,
   ContainerPage,
+  DrawerPage,
 } from '../pages';
 
 export const AppRoutes = () => {
@@ -29,6 +30,7 @@ export const AppRoutes = () => {
       <Route path="/box" element={<BoxPage />} />
       <Route path="/button" element={<ButtonPage />} />
       <Route path="/container" element={<ContainerPage />} />
+      <Route path="/drawer" element={<DrawerPage />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

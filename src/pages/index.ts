@@ -7,4 +7,5 @@ export * from './MediaQueries';
 export * from './BoxPage';
 export * from './ButtonPage';
 export * from './ContainerPage';
+export * from './DrawerPage';
 export * from './NotFound';

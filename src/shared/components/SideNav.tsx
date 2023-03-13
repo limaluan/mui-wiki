@@ -33,7 +33,7 @@ export const SideNav = ({ children }: ISideNavProps) => {
     { title: 'LAYOUT', subItems: ['Geral', 'Temas', 'MediaQueries'] },
     {
       title: 'COMPONENTES',
-      subItems: ['Box', 'Button', 'Container', 'Grid', 'Drawer',],
+      subItems: ['Box', 'Button', 'Container', 'Drawer',],
     },
   ];
 

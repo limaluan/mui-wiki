@@ -27,9 +27,9 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
   const { toggleDrawerOpen } = useDrawerContext();
 
   useEffect(() => {
-    document.title = title + " | MUI Wiki"
+    document.title = title + ' | MUI Wiki';
   }, []);
-  
+
   return (
     <Box height="100%" display="flex" flexDirection="column">
       {/* HEADER */}
@@ -102,15 +102,15 @@ export const PageLayout = ({ children, title }: IBasePageProps) => {
         </Typography>
       </Box>
 
-      <Box
-        flex={1}
-        overflow="auto"
-        display="flex"
-        flexDirection="column"
-        gap={2}
-        padding={4}
-      >
-        {children}
+      <Box flex={1} overflow="auto" padding={4}>
+        <Box
+          width={smDown ? '100%' : '80%'}
+          display="flex"
+          flexDirection="column"
+          gap={2}
+        >
+          {children}
+        </Box>
       </Box>
     </Box>
   );

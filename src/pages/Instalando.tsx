@@ -8,7 +8,7 @@ export const Instalacao = () => {
       <Box display="flex" flexDirection="column" gap={2}>
         <Typography>
           Comece a criar interfaces incríveis e responsivas com o Material UI, a
-          biblioteca de componentes mais popular para o React.
+          biblioteca de componentes mais popular para o React. <br/>
           Acelere o
           desenvolvimento do seu projeto com templates pré-construídos e
           customizáveis.

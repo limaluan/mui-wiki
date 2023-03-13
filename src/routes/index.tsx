@@ -9,6 +9,7 @@ import {
   NotFound,
   BoxPage,
   ButtonPage,
+  ContainerPage,
 } from '../pages';
 
 export const AppRoutes = () => {
@@ -27,6 +28,7 @@ export const AppRoutes = () => {
       {/* COMPONENTES */}
       <Route path="/box" element={<BoxPage />} />
       <Route path="/button" element={<ButtonPage />} />
+      <Route path="/container" element={<ContainerPage />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

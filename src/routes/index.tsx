@@ -7,6 +7,7 @@ import {
   Temas,
   MediaQueries,
   NotFound,
+  BoxPage,
 } from '../pages';
 
 export const AppRoutes = () => {
@@ -18,6 +19,7 @@ export const AppRoutes = () => {
       <Route path="/geral" element={<Geral />} />
       <Route path="/temas" element={<Temas />} />
       <Route path="/mediaqueries" element={<MediaQueries />} />
+      <Route path="/box" element={<BoxPage />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

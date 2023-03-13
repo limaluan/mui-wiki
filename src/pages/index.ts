@@ -4,4 +4,5 @@ export * from './Usando';
 export * from './Geral';
 export * from './Temas';
 export * from './MediaQueries';
+export * from './BoxPage';
 export * from './NotFound';

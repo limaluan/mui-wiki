@@ -62,7 +62,7 @@ Com ele você pode saber mais sobre o funcionamento do Material UI e pesquisar s
 
 ```bash
 # Crie uma pasta
-$ mkdir react-ignite-components
+$ mkdir mui-wiki
 
 # Clone este repositório para a pasta anterior
 $ git clone https://github.com/limaluan/WatchMe

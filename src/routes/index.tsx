@@ -1,5 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
-import { Usando, Home, Instalacao, Geral, Temas } from '../pages';
+import {
+  Usando,
+  Home,
+  Instalacao,
+  Geral,
+  Temas,
+  MediaQueries,
+  NotFound,
+} from '../pages';
 
 export const AppRoutes = () => {
   return (
@@ -9,6 +17,8 @@ export const AppRoutes = () => {
       <Route path="/usando" element={<Usando />} />
       <Route path="/geral" element={<Geral />} />
       <Route path="/temas" element={<Temas />} />
+      <Route path="/mediaqueries" element={<MediaQueries />} />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 };

@@ -31,7 +31,10 @@ export const SideNav = ({ children }: ISideNavProps) => {
   const sidenavItems: ISideNavItem[] = [
     { title: 'INTRODUÇÃO', subItems: ['Instalando', 'Usando'] },
     { title: 'LAYOUT', subItems: ['Geral', 'Temas', 'MediaQueries'] },
-    { title: 'COMPONENTES', subItems: ['Drawer', 'Button', 'Box', 'Container', 'Grid'] },
+    {
+      title: 'COMPONENTES',
+      subItems: ['Box', 'Button', 'Container', 'Grid', 'Drawer',],
+    },
   ];
 
   return (
